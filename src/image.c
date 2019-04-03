@@ -257,6 +257,10 @@ void draw_detections(image im, detection *dets, int num, float thresh, char **na
         }
         if(class >= 0){
             int width = im.h * .006;
+            
+            if(width == 0) {
+                width = 1;
+            }
 
             /*
                if(0){
